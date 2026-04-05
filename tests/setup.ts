@@ -1,0 +1,4 @@
+process.env.DATABASE_URL =
+  "postgresql://test:test@localhost:5432/test";
+process.env.AUTH_SECRET = "test-secret-for-unit-tests-only";
+process.env.NEXTAUTH_URL = "http://localhost:3000";
