@@ -7,7 +7,7 @@ import { signIn } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { registerSchema, type RegisterInput } from "@/lib/auth";
+import { registerSchema, type RegisterInput } from "@/lib/validations/auth";
 import { Loader2 } from "lucide-react";
 
 export function RegisterForm() {
