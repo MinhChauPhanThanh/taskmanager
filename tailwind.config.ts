@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
-import fontFamily from "tailwindcss/defaultTheme"
+// FIX: Sử dụng dấu ngoặc nhọn để lấy đúng thuộc tính fontFamily
+import { fontFamily } from "tailwindcss/defaultTheme"
 
 const config: Config = {
   darkMode: ["class"],

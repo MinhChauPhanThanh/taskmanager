@@ -6,8 +6,9 @@ export const createTaskSchema = z.object({
   description: z.string().max(5000).optional(),
   status: z.nativeEnum(TaskStatus).default(TaskStatus.TODO),
   priority: z.nativeEnum(Priority).default(Priority.MEDIUM),
-  deadline: z.string().datetime().nullable().optional(),
-  assigneeId: z.string().cuid().nullable().optional(),
+  // Chấp nhận cả chuỗi hoặc đối tượng Date, và tự động chuyển đổi
+  deadline: z.union([z.string(), z.date()]).nullable().optional(),
+  assigneeId: z.string().nullable().optional().or(z.literal("")),
 });
 
 export const updateTaskSchema = createTaskSchema.partial().extend({

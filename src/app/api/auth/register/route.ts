@@ -8,7 +8,7 @@ import {
   validationError,
   logRequest,
 } from "@/lib/api-utils";
-import { registerSchema } from "@/lib/validations/auth";
+import { registerSchema } from "@/lib/auth";
 
 export async function POST(req: NextRequest) {
   logRequest("POST", "/api/auth/register");

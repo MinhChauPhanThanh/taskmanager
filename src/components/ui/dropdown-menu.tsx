@@ -8,7 +8,7 @@ const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
 const DropdownMenuGroup = DropdownMenuPrimitive.Group;
 const DropdownMenuPortal = DropdownMenuPrimitive.Portal;
 
-const DropdownMenuSeparator = React.forwardRef
+const DropdownMenuSeparator = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>
 >(({ className, ...props }, ref) => (
@@ -21,7 +21,7 @@ const DropdownMenuSeparator = React.forwardRef
 DropdownMenuSeparator.displayName =
   DropdownMenuPrimitive.Separator.displayName;
 
-const DropdownMenuContent = React.forwardRef
+const DropdownMenuContent = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>
 >(({ className, sideOffset = 4, ...props }, ref) => (
@@ -40,7 +40,7 @@ const DropdownMenuContent = React.forwardRef
 DropdownMenuContent.displayName =
   DropdownMenuPrimitive.Content.displayName;
 
-const DropdownMenuItem = React.forwardRef
+const DropdownMenuItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {
     inset?: boolean;

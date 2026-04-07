@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { createTaskSchema } from "@/lib/validations/task";
 import { createProjectSchema } from "@/lib/validations/project";
-import { loginSchema, registerSchema } from "@/lib/validations/auth";
+import { loginSchema, registerSchema } from "@/lib/auth";
 import { TaskStatus, Priority } from "@prisma/client";
 
 describe("createTaskSchema", () => {

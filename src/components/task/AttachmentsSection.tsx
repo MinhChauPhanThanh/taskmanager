@@ -1,4 +1,5 @@
 "use client";
+
 import { useRef, useState } from "react";
 import { useTask } from "@/hooks/useTasks";
 import { useQueryClient } from "@tanstack/react-query";
@@ -120,7 +121,7 @@ export function AttachmentsSection({ projectId, taskId }: Props) {
                 )}
               </div>
               <div className="flex-1 min-w-0">
-                
+                <a
                   href={a.url}
                   target="_blank"
                   rel="noopener noreferrer"

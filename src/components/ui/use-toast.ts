@@ -1,4 +1,5 @@
 "use client";
+
 import * as React from "react";
 import type {
   ToastProps,
@@ -31,10 +32,8 @@ function genId() {
   return count.toString();
 }
 
-const toastTimeouts = new Map
-  string,
-  ReturnType<typeof setTimeout>
->();
+// FIX: Đưa về cùng một dòng và thêm dấu < > đúng chuẩn
+const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>();
 
 function addToRemoveQueue(toastId: string) {
   if (toastTimeouts.has(toastId)) return;
